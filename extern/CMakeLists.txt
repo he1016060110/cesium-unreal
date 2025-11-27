@@ -145,6 +145,8 @@ endif()
 option(BUILD_SHARED_LIB OFF)
 option(SUPPORT_CONSOLE_APP OFF)
 set(LIB_INSTALL_DIR ${CMAKE_INSTALL_LIBDIR})
+# CMake 4.x compatibility for tidy-html5 which uses cmake_minimum_required(VERSION 2.8.12)
+set(CMAKE_POLICY_VERSION_MINIMUM 3.5)
 add_subdirectory(tidy-html5)
 
 # Don't build the cesium-native tests by default
