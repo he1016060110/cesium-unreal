@@ -26,6 +26,8 @@ set(VCPKG_CMAKE_CONFIGURE_OPTIONS "")
 list(APPEND VCPKG_CMAKE_CONFIGURE_OPTIONS "-DCMAKE_MSVC_RUNTIME_LIBRARY:STRING=MultiThreadedDLL")
 list(APPEND VCPKG_CMAKE_CONFIGURE_OPTIONS "-DCMAKE_CXX_FLAGS_DEBUG:STRING=/MD /Z7 /Ob0 /Od /RTC1")
 list(APPEND VCPKG_CMAKE_CONFIGURE_OPTIONS "-DCMAKE_C_FLAGS_DEBUG:STRING=/MD /Z7 /Ob0 /Od /RTC1")
+# CMake 4.x compatibility: allow old cmake_minimum_required versions
+list(APPEND VCPKG_CMAKE_CONFIGURE_OPTIONS "-DCMAKE_POLICY_VERSION_MINIMUM=3.5")
 
 # When building official binaries on CI, use a very specific MSVC toolset version (which must be installed).
 # When building locally, use the default.
