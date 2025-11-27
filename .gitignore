@@ -6,7 +6,7 @@ cesiumunreal.sln
 packages
 Intermediate
 ThirdParty/build
-Source/ThirdParty
+Source/ThirdParty/lib
 node_modules
 extern/build-helper.sh
 Documentation/Reference
